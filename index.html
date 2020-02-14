@@ -15,11 +15,7 @@
       <a href="/" class="img-container">
         <img class="img--main" src="/beer4_main.svg" alt="Пивной Четверг" />
       </a>
-      <p class="info">
-        ПИВНОЙ ЧЕТВЕРГ - ЭТО ЕЖЕНЕДЕЛЬНЕЙШАЯ САМАРСКАЯ IT-КОНФЕРЕНЦИЯ В ОДНОМ ИЗ
-        БАРОВ В РАЙОНЕ ЦЕНТРА, КОТОРАЯ ПРОХОДИТ КАЖДЫЙ ЧЕТВЕРГ И НА КОТОРОЙ ВСЕ
-        ПЬЮТ ПИВО И РАЗГОВАРИВАЮТ
-      </p>
+      <p class="info">Пивной Четверг - это еженедельнейшая Самарская IT-конференция в одном из баров в районе центра, которая проходит каждый четверг и на которой все пьют пиво и разговаривают</p>
       <a
         href="https://t.me/joinchat/Ew15LEePsg6RSO40ebtFrg"
         target="_blanc"
@@ -38,7 +34,7 @@
       </p>
       <p class="disc">
         Мы никого ни к чему не призываем, тем более не агитируем употреблять
-        спиртные напитки! Всё это - постирония, иф ю ноу, вот ай мин!??
+        спиртные напитки!</br>Всё это - постирония, иф ю ноу, вот ай мин!??
       </p>
     </div>
     <style>
@@ -73,6 +69,7 @@
         margin: auto;
         padding-bottom: 30px;
         font-size: 25px;
+        width: 100%;
       }
       .button {
         margin: 70px auto 70px auto;
@@ -91,8 +88,23 @@
         max-width: 180px;
       }
       .disc {
-        font-size: 6px;
+        font-size: 8px;
         font-style: italic;
+        letter-spacing: 0.1em;
+        line-height: normal;
+      }
+
+      @media (max-width: 570px) {
+        .info {
+          font-size: 13px;
+        }
+        .button {
+          font-size: 20px;
+          padding: 0px;
+        }
+        .disc {
+          font-size: 1px;
+        }
       }
     </style>
   </body>
