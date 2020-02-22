@@ -30,6 +30,8 @@ jobs:
       - run: yarn build
       - run: yarn export
       - run: touch ./out/.nojekyll
+      - run: touch ./out/CNAME
+      - run: echo "beer4.ru" > ./out/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
