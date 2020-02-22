@@ -1,12 +1,31 @@
 {
-  "name": "beer4",
-  "version": "1.0.0",
-  "private": true,
+  "name": "beer4.ru",
+  "description": "Beer4.ru website",
+  "version": "1.1.0",
+  "keywords": [
+    "beer4",
+    "pivnoy chetverg",
+    "meetup",
+    "samara",
+    "javascript",
+    "js"
+  ],
+  "homepage": "https://beer4.ru",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beer4/beer4.ru.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beer4/beer4.ru/issues",
+    "email": "beer4project@gmail.com"
+  },
   "author": {
     "name": "nikolasmelui",
     "email": "slak@samaradom.ru",
     "url": "https://beer4.ru"
   },
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
