@@ -1,17 +1,21 @@
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
+
+// Helpers
+import contentfulClient from "../helpers/contentful";
 
 // Components
-import ImageContainer from '../components/ImageContainer';
-import Information from '../components/Information';
-import Button from '../components/Button';
-import Footer from '../components/Footer';
-import Disclaimer from '../components/Disclaimer';
+import ImageContainer from "../components/ImageContainer";
+import Information from "../components/Information";
+import Button from "../components/Button";
+import Footer from "../components/Footer";
+import Disclaimer from "../components/Disclaimer";
+import UpcomingEventInformation from "../components/UpcomingEventInformation";
 
-const Home = () => (
+const Home = props => (
   <div>
     <Head>
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Пивной Четверг</title>
       <link rel="shortcut icon" href="/beer4_favicon.ico" type="image/x-icon" />
@@ -27,16 +31,17 @@ const Home = () => (
       </ImageContainer>
       <Information
         text="Пивной Четверг - это еженедельнейшая Самарская IT-конференция в одном из
-        баров в районе центра, которая проходит каждый четверг и на которой все
+        баров в районе центра, которая проходит раз в две недели, в какой-то четверг, и на которой все
         пьют пиво и разговаривают"
       />
       <Button
         url="https://t.me/joinchat/Ew15LEePsg6RSO40ebtFrg"
         text="Вот наш чат в телеграмме"
       />
-      <Information
-        text="Следующий пивной четверг будет проходить в четверг, в баре “Шишкин”, на
-        полевой 26, с 7 часов вечера"
+      <UpcomingEventInformation
+        placeTitle={props.placeTitle}
+        date={props.date}
+        location={props.location}
       />
       <ImageContainer>
         <img
@@ -55,7 +60,7 @@ const Home = () => (
     <style jsx global>{`
       body {
         background-color: #6636ee;
-        font-family: 'Montserrat';
+        font-family: "Montserrat";
         font-style: normal;
         font-weight: 900;
         line-height: 35px;
@@ -83,5 +88,19 @@ const Home = () => (
     `}</style>
   </div>
 );
+
+// TODO: Remove this example and get logic to the hooks
+Home.getInitialProps = async () => {
+  // TODO: And remove this hard code
+  const eventEntry = "5nE3VQ8xub8mWhZSbqEJNw";
+  const data = (await contentfulClient.getEntry(eventEntry)).fields;
+  const { title, placeTitle, date, location, image, photos, url } = data;
+  console.log(data);
+  return {
+    placeTitle,
+    date,
+    location
+  };
+};
 
 export default Home;
