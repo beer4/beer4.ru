@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
 
 // Helpers
 import contentfulClient from '../services/contentful';
@@ -13,10 +12,34 @@ import Footer from '../components/Footer';
 import Disclaimer from '../components/Disclaimer';
 import UpcomingEventInformation from '../components/UpcomingEventInformation';
 
-const Home = props => {
-  const { date, place, location } = props;
-
+const Home = () => {
   const telegramLink = 'https://t.me/joinchat/Ew15LEePsg6RSO40ebtFrg';
+
+  const fetchActualEvent = async () => {
+    const data = await contentfulClient.getEntries({
+      content_type: 'event',
+      order: 'sys.createdAt',
+    });
+    const event = data.items.pop().fields;
+    const { date, place, location } = event;
+    return event
+      ? {
+          date,
+          place,
+          location,
+        }
+      : null;
+  };
+
+  const [actualEvent, setActualEvent] = useState([]);
+
+  useEffect(() => {
+    const getActualEvent = async () => {
+      const event = await fetchActualEvent();
+      setActualEvent(event);
+    };
+    getActualEvent();
+  }, []);
 
   return (
     <div>
@@ -49,11 +72,15 @@ const Home = props => {
         пьют пиво и разговаривают"
         />
         <Button url={telegramLink} text="Вот наш чат в телеграме" />
-        <UpcomingEventInformation
-          date={date}
-          place={place}
-          location={location}
-        />
+        {actualEvent ? (
+          <UpcomingEventInformation
+            date={actualEvent.date}
+            place={actualEvent.place}
+            location={actualEvent.location}
+          />
+        ) : (
+          console.log('HEEEEEEEEEEEEEEEEEEEE')
+        )}
         <ImageContainer>
           <img
             className="img--footer"
@@ -103,32 +130,6 @@ const Home = props => {
       </style>
     </div>
   );
-};
-
-Home.getInitialProps = async () => {
-  const data = await contentfulClient.getEntries({
-    content_type: 'event',
-    order: 'sys.createdAt',
-  });
-  const event = data.items.pop().fields;
-  const { date, place, location } = event;
-  return {
-    date,
-    place,
-    location,
-  };
-};
-
-Home.propTypes = {
-  date: PropTypes.string,
-  place: PropTypes.string,
-  location: PropTypes.instanceOf(Object),
-};
-
-Home.defaultProps = {
-  date: String(new Date()),
-  place: 'Полевая 55, Бар "Шишкин"',
-  location: { lon: 50.125682186508165, lat: 53.20326855803267 },
 };
 
 export default Home;
