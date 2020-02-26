@@ -27,10 +27,11 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - run: yarn
+      - run: echo "CONTENTFUL_SPACE_ID=${{ secrets.CONTENTFUL_SPACE_ID }}" > .env
+      - run: echo "CONTENTFUL_ACCESS_TOKEN=${{ secrets.CONTENTFUL_ACCESS_TOKEN }}" >> .env
       - run: yarn build
       - run: yarn export
       - run: touch ./out/.nojekyll
-      - run: touch ./out/CNAME
       - run: echo "beer4.ru" > ./out/CNAME
 
       - name: Deploy
