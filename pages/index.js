@@ -3,7 +3,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 
 // Helpers
-import contentfulClient from '../helpers/contentful';
+import contentfulClient from '../services/contentful';
 
 // Components
 import ImageContainer from '../components/ImageContainer';
@@ -105,17 +105,13 @@ const Home = props => {
   );
 };
 
-// TODO: Remove this example and get logic to the hooks
 Home.getInitialProps = async () => {
-  // TODO: And remove this hard code
-  const eventEntry = '5nE3VQ8xub8mWhZSbqEJNw';
-  const data = (await contentfulClient.getEntry(eventEntry)).fields;
-  /**
-   * Responsed data fields:
-   * title, date, place, location, image, photos, url
-   * */
-  const { date, place, location } = data;
-  console.log(data);
+  const data = await contentfulClient.getEntries({
+    content_type: 'event',
+    order: 'sys.createdAt',
+  });
+  const event = data.items.pop().fields;
+  const { date, place, location } = event;
   return {
     date,
     place,
