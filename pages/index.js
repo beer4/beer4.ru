@@ -33,6 +33,9 @@ const Home = props => {
           href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
           rel="stylesheet"
         />
+        <meta property="og:title" content="Beer4" />
+        <meta property="og:url" content="https://beer4.ru" />
+        <meta property="og:image" content="https://beer4.ru/beer4_main.png" />
       </Head>
 
       <div className="main-container">
