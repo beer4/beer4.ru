@@ -1,9 +1,9 @@
 
-# Пивной Четверг
+# 🍺 Пивной Четверг
 
-Пивной Четверг (beer4.ru) powered by [nikolasmelui][nikolasmelui].
+Beer4.ru powered by [nikolasmelui][nikolasmelui].
 
-Using react, next.js, github pages and actions for static build and CI, and contentful as headless CMS.
+Using react, next.js, github pages and actions for static build and CI, contentful as a headless CMS.
 
 ***
 
@@ -18,13 +18,13 @@ Operating system:
 
 Node:
 
-* NodeJS >= 12.6.1
-* YARN >= 1.22
+* Node.js >= 12.6.1
+* Yarn >= 1.22
 
 ### Installation
 
 ```bash
-yarn && npm run install
+yarn
 ```
 
 ### Quick start
@@ -87,4 +87,4 @@ SOFTWARE.
 [NikolasMelui][nikolasmelui]
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-   [nikolasmelui]: <https://github.com/NikolasMelui>
+[nikolasmelui]: <https://github.com/NikolasMelui>
