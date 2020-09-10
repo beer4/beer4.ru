@@ -21,7 +21,7 @@ const UpcomingEventInformation = props => {
       <a href={yandexMapUrl} target="_blank" rel="noopener noreferrer">
         {place}
       </a>
-      <br />c 7 часов вечера
+      <br />c 18:00 и до "последнего клиента"
       <style jsx>
         {`
           .upcoming-event-information {
