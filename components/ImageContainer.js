@@ -9,6 +9,8 @@ const ImageContainer = props => {
       <style jsx>{`
         .image-container {
           margin: 40px auto;
+          max-width: 100%;
+          overflow: hidden;
         }
         .image-container img {
           width: 100%;
