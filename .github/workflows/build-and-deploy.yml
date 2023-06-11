@@ -35,9 +35,9 @@ jobs:
       - name: Deploy
         uses: easingthemes/ssh-deploy@main
         env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SOURCE: "out/"
-        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        TARGET: ${{ secrets.REMOTE_TARGET }}
-        EXCLUDE: "/node_modules/"
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SOURCE: "out/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+          EXCLUDE: "/node_modules/"
