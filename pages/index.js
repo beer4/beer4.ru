@@ -109,17 +109,20 @@ const Home = props => {
 };
 
 Home.getInitialProps = async () => {
-  const data = await contentfulClient.getEntries({
-    content_type: 'event',
-    order: 'sys.createdAt',
-  });
-  const event = data.items.pop().fields;
-  const { date, place, location } = event;
-  return {
-    date,
-    place,
-    location,
-  };
+  if (contentfulClient) {
+    const data = await contentfulClient.getEntries({
+      content_type: 'event',
+      order: 'sys.createdAt',
+    });
+    const event = data.items.pop().fields;
+    const { date, place, location } = event;
+    return {
+      date,
+      place,
+      location,
+    };
+  }
+  return {};
 };
 
 Home.propTypes = {
