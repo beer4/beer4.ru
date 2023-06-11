@@ -41,7 +41,7 @@
     "dotenv": "^8.2.0",
     "minimist": "1.2.5",
     "moment": "2.29.4",
-    "next": "9.3.2",
+    "next": "12.1.0",
     "pretty-quick": "^2.0.1",
     "prop-types": "^15.7.2",
     "react": "16.12.0",
