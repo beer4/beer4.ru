@@ -3,7 +3,7 @@
 
 Beer4.ru powered by [nikolasmelui][nikolasmelui].
 
-Using react, next.js, github pages and actions for static build and CI, contentful as a headless CMS.
+Using react, next.js and contentful as a headless CMS.
 
 ***
 
@@ -18,7 +18,7 @@ Operating system:
 
 Node:
 
-* Node.js >= 12.6.1
+* Node.js == 16.20.0
 * Yarn >= 1.22
 
 ### Installation
