@@ -111,7 +111,7 @@ const Home = props => {
 Home.getInitialProps = async () => {
   if (contentfulClient) {
     const data = await contentfulClient.getEntries({
-      content_type: 'event',
+      content_type: 'beer4',
       order: 'sys.createdAt',
     });
     const event = data.items.pop().fields;
