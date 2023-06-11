@@ -1,9 +1,9 @@
 
 # 🍺 Пивной Четверг
 
-Beer4.ru powered by [nikolasmelui][nikolasmelui].
+Using [next.js](https://nextjs.org/) as a web framework, [contentful](https://www.contentful.com/) as a headless CMS and [GitHub Actions](https://github.com/features/actions) as a CI automation tool.
 
-Using react, next.js and contentful as a headless CMS.
+Powered by [nikolasmelui][nikolasmelui].
 
 ***
 
