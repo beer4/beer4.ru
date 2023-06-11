@@ -128,13 +128,13 @@ Home.getInitialProps = async () => {
 Home.propTypes = {
   date: PropTypes.string,
   place: PropTypes.string,
-  location: PropTypes.instanceOf(Object),
+  location: PropTypes.string
 };
 
 Home.defaultProps = {
   date: String(new Date()),
-  place: 'Полевая 55, Бар "Шишкин"',
-  location: { lon: 50.125682186508165, lat: 53.20326855803267 },
+  place: 'Самара, Самарская 188А, "Бутылист"',
+  location: 'https://yandex.ru/maps/-/CCU1ZQrwkD'
 };
 
 export default Home;

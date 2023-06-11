@@ -6,7 +6,6 @@ import * as moment from 'moment';
 const UpcomingEventInformation = props => {
   const { date, place, location } = props;
   const parsedDate = moment(date).format('DD.MM.YYYY');
-  const yandexMapUrl = `https://maps.yandex.ru/?text=${location.lat},${location.lon}`;
 
   return (
     <p className="upcoming-event-information">
@@ -18,10 +17,10 @@ const UpcomingEventInformation = props => {
       <br />
       по адресу:
       <br />
-      <a href={yandexMapUrl} target="_blank" rel="noopener noreferrer">
+      <a href={location} target="_blank" rel="noopener noreferrer">
         {place}
       </a>
-      <br />c 18:00 и до "последнего клиента"
+      <br />c 19:00 и до "последнего клиента"
       <style jsx>
         {`
           .upcoming-event-information {
@@ -48,13 +47,13 @@ const UpcomingEventInformation = props => {
 UpcomingEventInformation.propTypes = {
   date: PropTypes.string,
   place: PropTypes.string,
-  location: PropTypes.instanceOf(Object),
+  location: PropTypes.string,
 };
 
 UpcomingEventInformation.defaultProps = {
   date: String(new Date()),
-  place: 'Полевая 55, Бар "Шишкин"',
-  location: { lon: 50.125682186508165, lat: 53.20326855803267 },
+  place: 'Самара, Самарская 188А, "Бутылист"',
+  location: 'https://yandex.ru/maps/-/CCU1ZQrwkD'
 };
 
 export default UpcomingEventInformation;
