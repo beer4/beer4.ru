@@ -29,8 +29,10 @@ const Home = props => {
           href="/beer4_favicon.ico"
           type="image/x-icon"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Hind:wght@700&family=Montserrat:wght@700&display=swap"
           rel="stylesheet"
         />
         <meta property="og:title" content="Beer4" />
@@ -75,7 +77,7 @@ const Home = props => {
         {`
           body {
             background-color: #6636ee;
-            font-family: 'Montserrat';
+            font-family: 'Montserrat', sans-serif;
             font-style: normal;
             font-weight: 900;
             line-height: 35px;
@@ -128,13 +130,13 @@ Home.getInitialProps = async () => {
 Home.propTypes = {
   date: PropTypes.string,
   place: PropTypes.string,
-  location: PropTypes.string
+  location: PropTypes.string,
 };
 
 Home.defaultProps = {
   date: String(new Date()),
   place: 'Самара, Самарская 188А, "Бутылист"',
-  location: 'https://yandex.ru/maps/-/CCU1ZQrwkD'
+  location: 'https://yandex.ru/maps/-/CCU1ZQrwkD',
 };
 
 export default Home;
