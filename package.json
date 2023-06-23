@@ -1,12 +1,17 @@
 {
   "name": "beer4.ru",
-  "description": "Beer4.ru website",
-  "version": "1.1.0",
+  "description": "Beer4 website",
+  "version": "1.2.0",
   "keywords": [
+    "beer",
     "beer4",
+    "beer4.ru",
+    "pivnoy 4etverg",
     "pivnoy chetverg",
     "meetup",
+    "party",
     "samara",
+    "moscow",
     "javascript",
     "js"
   ],
