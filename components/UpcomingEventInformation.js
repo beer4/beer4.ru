@@ -11,16 +11,20 @@ const UpcomingEventInformation = props => {
     <p className="upcoming-event-information">
       Следующий пивной четверг
       <br />
-      будет проходить в четверг
+      будет в четверг
+      <br />
       <br />
       <span>{parsedDate}</span>
+      <br />
       <br />
       по адресу:
       <br />
       <a href={location} target="_blank" rel="noopener noreferrer">
         {place}
       </a>
-      <br />c 19:00 и до "последнего клиента"
+      <br />
+      <br />
+      Стартуем в 19:00
       <style jsx>
         {`
           .upcoming-event-information {
@@ -53,7 +57,7 @@ UpcomingEventInformation.propTypes = {
 UpcomingEventInformation.defaultProps = {
   date: String(new Date()),
   place: 'Самара, Самарская 188А, "Бутылист"',
-  location: 'https://yandex.ru/maps/-/CCU1ZQrwkD'
+  location: 'https://yandex.ru/maps/-/CCU1ZQrwkD',
 };
 
 export default UpcomingEventInformation;
