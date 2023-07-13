@@ -40,15 +40,12 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "@ducanh2912/next-pwa": "^9.2.1",
     "classnames": "^2.3.2",
     "contentful": "^7.14.14",
     "date-fns": "^2.30.0",
     "dotenv": "^16.3.1",
-    "minimist": "1.2.8",
     "next": "13.4.8",
     "pretty-quick": "^3.1.3",
-    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.32.2"
