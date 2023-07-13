@@ -35,8 +35,6 @@
     "dev": "next dev",
     "lint": "next lint",
     "build": "next build",
-    "start": "next start",
-    "export": "next export",
     "precommit": "lint-staged"
   },
   "dependencies": {
