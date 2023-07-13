@@ -1,0 +1,12 @@
+@use "../../styles/media" as m;
+
+.information {
+  margin: auto;
+  padding-bottom: 30px;
+  font-size: 25px;
+  width: 100%;
+
+  @include m.sm {
+    font-size: 13px;
+  }
+}

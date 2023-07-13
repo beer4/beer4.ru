@@ -1,0 +1,10 @@
+@mixin Montserrat {
+  font-family: var(--montserrat);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 35px;
+  letter-spacing: 0.19em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-text);
+}

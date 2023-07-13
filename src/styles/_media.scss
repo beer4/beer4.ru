@@ -1,0 +1,7 @@
+@use "variables.module" as v;
+
+@mixin sm {
+  @media screen and (max-width: v.$screen-size-sm) {
+    @content;
+  }
+}

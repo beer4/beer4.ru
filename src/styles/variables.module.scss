@@ -1,0 +1,14 @@
+$color-background: #6636ee;
+$color-text: white;
+$color-accent: #ff54b0;
+
+$screen-size-sm: 570px;
+
+:export {
+  colorBackground: $color-background;
+  colorText: $color-text;
+  colorAccent: $color-accent;
+
+  screenSizeSm: $screen-size-sm;
+}
+

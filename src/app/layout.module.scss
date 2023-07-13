@@ -1,0 +1,19 @@
+@use "../styles/typography" as t;
+
+.body {
+  @include t.Montserrat;
+
+  background-color: var(--color-background);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 980px;
+  margin: auto;
+}
+
+.footer {
+  font-size: 12px;
+}
