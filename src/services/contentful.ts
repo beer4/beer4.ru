@@ -21,6 +21,7 @@ const getData = async (): Promise<{ date: Date; place: string; location: string 
     const event: any | undefined = data.items.pop()?.fields;
     if (event) {
       const { date, place, location } = event;
+
       return {
         date: new Date(date),
         place,
@@ -28,6 +29,7 @@ const getData = async (): Promise<{ date: Date; place: string; location: string 
       };
     }
   }
+
   return {
     date: new Date(),
     place: 'Самара, Самарская 188А, "Бутылист"',

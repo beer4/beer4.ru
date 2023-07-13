@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import config from "../../package.json";
 import { ImageContainer } from "../components/image-container";
 import Image from "next/image";
@@ -9,11 +9,7 @@ import { UpcomingEventInformation } from "../components/upcoming-event-informati
 import styles from "./page.module.scss";
 import classNames from "classnames";
 import { getData } from "../services/contentful";
-
-const TITLE = "Пивной Четверг";
-const DESCRIPTION =
-  "Пивной Четверг - это еженедельнейшая Самарская IT-конференция в одном из баров в районе центра, на которой все пьют пиво и разговаривают";
-const TELEGRAM_LINK = "https://t.me/joinchat/Ew15LEePsg6RSO40ebtFrg";
+import { DESCRIPTION, TELEGRAM_LINK, TITLE } from "../seo";
 
 const Home = async () => {
   const { date, place, location } = await getData();

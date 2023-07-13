@@ -1,10 +1,10 @@
 import type { FC, PropsWithChildren } from "react";
-import { Metadata } from "next";
+import React from "react";
+import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import config from "../../package.json";
 import styles from "./layout.module.scss";
 import "../styles/global.scss";
-import React from "react";
 import { Disclaimer } from "../components/disclaimer";
 
 const font = Montserrat({

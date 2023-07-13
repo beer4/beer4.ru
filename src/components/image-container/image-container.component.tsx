@@ -3,9 +3,9 @@ import styles from "./image-container.module.scss";
 
 type Props = { renderImage: FC<{ className: string }> };
 
-const ImageContainer: FC<Props> = ({ renderImage: Image }) => (
+const ImageContainer: FC<Props> = ({ renderImage: Child }) => (
   <a href="/" className={styles.imageContainer}>
-    <Image className={styles.img} />
+    <Child className={styles.img} />
   </a>
 );
 
