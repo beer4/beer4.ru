@@ -1,0 +1,12 @@
+@use "../../styles/media" as m;
+
+.disclaimer {
+  font-size: 8px;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  line-height: normal;
+
+  @include m.sm {
+    font-size: 3px;
+  }
+}
