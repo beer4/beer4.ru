@@ -9,7 +9,7 @@ import { UpcomingEventInformation } from '../components/upcoming-event-informati
 import styles from './page.module.scss';
 import classNames from 'classnames';
 import { getData } from '../services/contentful';
-import { DESCRIPTION, TELEGRAM_LINK, TITLE } from '../seo';
+import { TITLE, DESCRIPTION, TELEGRAM_LINK, BOOSTY_LINK } from '../seo';
 
 const Home = async () => {
   const { date, place, location } = await getData();
@@ -24,6 +24,8 @@ const Home = async () => {
       <Information text={DESCRIPTION} />
 
       <Button url={TELEGRAM_LINK} text="Вот наш чат в телеграме" />
+
+      <Button url={BOOSTY_LINK} text="Вот наша страница на бусти" />
 
       <UpcomingEventInformation date={date} place={place} location={location} />
 
