@@ -1,23 +1,23 @@
-import type { FC, PropsWithChildren } from "react";
-import React from "react";
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import config from "../../package.json";
-import styles from "./layout.module.scss";
-import "../styles/global.scss";
-import { Disclaimer } from "../components/disclaimer";
+import type { FC, PropsWithChildren } from 'react';
+import React from 'react';
+import type { Metadata } from 'next';
+import { Montserrat } from 'next/font/google';
+import config from '../../package.json';
+import styles from './layout.module.scss';
+import '../styles/global.scss';
+import { Disclaimer } from '../components/disclaimer';
 
 const font = Montserrat({
-  weight: ["700"],
-  subsets: ["cyrillic", "latin"],
-  variable: "--montserrat",
-  display: "swap",
+  weight: ['700'],
+  subsets: ['cyrillic', 'latin'],
+  variable: '--montserrat',
+  display: 'swap',
 });
 
 const currentYear = new Date().getFullYear();
 
 const Layout: FC<PropsWithChildren> = ({ children }) => (
-  <html lang={"ru"} className={font.variable}>
+  <html lang={'ru'} className={font.variable}>
     <body className={styles.body}>
       <main className={styles.main}>{children}</main>
 

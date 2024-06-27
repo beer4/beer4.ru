@@ -1,4 +1,4 @@
-@use "variables.module" as v;
+@use 'variables.module' as v;
 
 :root {
   --color-background: #{v.$color-background};

@@ -1,5 +1,5 @@
-import type { FC } from "react";
-import styles from "./image-container.module.scss";
+import type { FC } from 'react';
+import styles from './image-container.module.scss';
 
 type Props = { renderImage: FC<{ className: string }> };
 

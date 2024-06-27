@@ -1,5 +1,5 @@
-import type { FC } from "react";
-import styles from "./information.module.scss";
+import type { FC } from 'react';
+import styles from './information.module.scss';
 
 type Props = { text: string };
 

@@ -1,1 +1,1 @@
-export * from "./disclaimer.component";
+export * from './disclaimer.component';

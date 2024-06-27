@@ -1,7 +1,7 @@
-import type { FC } from "react";
-import { format } from "date-fns";
-import styles from "./upcoming-event-information.module.scss";
-import Link from "next/link";
+import type { FC } from 'react';
+import { format } from 'date-fns';
+import styles from './upcoming-event-information.module.scss';
+import Link from 'next/link';
 
 type Props = {
   date: Date;
@@ -9,8 +9,8 @@ type Props = {
   location: string;
 };
 
-const UpcomingEventInformation: FC<Props> = ({ date, location, place }) => {
-  const dateString = format(date, "dd.MM.yyyy");
+const UpcomingEventInformation: FC<Props> = ({ date, location }) => {
+  const dateString = format(date, 'dd.MM.yyyy');
 
   return (
     <p className={styles.upcomingEventInformation}>
@@ -19,13 +19,8 @@ const UpcomingEventInformation: FC<Props> = ({ date, location, place }) => {
       будет в четверг
       <br />
       <br />
-      <span className={styles.accent}>{dateString}</span>
-      <br />
-      <br />
-      по адресу:
-      <br />
       <Link href={location} target="_blank" rel="noopener noreferrer" className={styles.accent}>
-        {place}
+        где-то здесь
       </Link>
       <br />
       <br />

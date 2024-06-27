@@ -1,6 +1,6 @@
-import type { FC } from "react";
-import Link from "next/link";
-import styles from "./button.module.scss";
+import type { FC } from 'react';
+import Link from 'next/link';
+import styles from './button.module.scss';
 
 type Props = { url: string; text: string };
 

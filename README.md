@@ -1,25 +1,24 @@
-
 # 🍺 Пивной Четверг
 
 Using [next.js](https://nextjs.org/) as a web framework, [contentful](https://www.contentful.com/) as a headless CMS and [GitHub Actions](https://github.com/features/actions) as a CI automation tool.
 
 Powered by [nikolasmelui][nikolasmelui].
 
-***
+---
 
 ## Requirements
 
 Operating system:
 
-* Ubuntu/Debian
-* CentOS/RHEL
-* MacOS
-* Windows
+- Ubuntu/Debian
+- CentOS/RHEL
+- MacOS
+- Windows
 
 Node:
 
-* Node.js == 16.20.0
-* Yarn >= 1.22
+- Node.js == 16.20.0
+- Yarn >= 1.22
 
 ### Installation
 
@@ -86,5 +85,5 @@ SOFTWARE.
 **From developers 2 developers.**
 [NikolasMelui][nikolasmelui]
 
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-[nikolasmelui]: <https://github.com/NikolasMelui>
+[//]: # "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
+[nikolasmelui]: https://github.com/NikolasMelui
